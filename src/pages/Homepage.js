@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Row, Col } from "react-bootstrap";
+
 import Pokemon from "../components/Pokemon";
+import Loader from "../components/Loader";
 
 const APIURL = 'https://pokeapi.co/api/v2';
 
@@ -32,7 +34,7 @@ const Homepage = () => {
   return(
     <>
       {loading &&
-        <h1>Loading ...</h1>
+        <Loader />
       }
       {!loading &&
         <Row>
